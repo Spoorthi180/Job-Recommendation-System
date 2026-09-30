@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CareerMatch AI - Login</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 900px;
+    min-height: 520px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* LEFT SIDE */
+
+.left {
+    width: 50%;
+    background: linear-gradient(135deg, #5b5ce2, #7b4bb7);
+    color: white;
+    padding: 60px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.left h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.left p {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.features {
+    margin-top: 35px;
+}
+
+.feature {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+/* RIGHT SIDE */
+
+.right {
+    width: 50%;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* INPUT */
+
+.input-box {
+    margin-bottom: 18px;
+}
+
+.input-box label {
+    display: block;
+    color: #444;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108,99,255,0.25);
+}
+
+/* LOGIN BUTTON */
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #6c63ff, #7b4bb7);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* REGISTER */
+
+.register {
+    text-align: center;
+    margin-top: 25px;
+    color: #777;
+}
+
+.register a {
+    color: #6c63ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .left {
+        padding: 35px;
+    }
+
+    .right {
+        padding: 40px 30px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="left">
+
+        <div class="logo">
+            🤖 CareerMatch AI
+        </div>
+
+        <h1>
+            Find the right career for you.
+        </h1>
+
+        <p>
+            Discover job opportunities that match
+            your skills, education and career goals.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                ✓ Skill-based job matching
+            </div>
+
+            <div class="feature">
+                ✓ Personalized career recommendations
+            </div>
+
+            <div class="feature">
+                ✓ Resume-based job discovery
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="right">
+
+        <h2>Welcome Back 👋</h2>
+
+        <p class="subtitle">
+            Login to continue your career journey.
+        </p>
+
+
+        <form action="LoginServlet" method="post">
+
+            <div class="input-box">
+
+                <label>Username</label>
+
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter your username"
+                    required>
+
+            </div>
+
+
+            <div class="input-box">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required>
+
+            </div>
+
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+
+        <p class="register">
+
+            New to CareerMatch?
+
+            <a href="register.html">
+                Create an account
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

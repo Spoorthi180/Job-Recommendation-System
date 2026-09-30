@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CareerMatch AI - Register</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN BOX */
+
+.container {
+    width: 900px;
+    min-height: 550px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* LEFT SIDE */
+
+.left {
+    width: 50%;
+    background: linear-gradient(135deg, #5b5ce2, #7b4bb7);
+    color: white;
+    padding: 55px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.left h1 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.left p {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.features {
+    margin-top: 30px;
+}
+
+.feature {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+/* RIGHT SIDE */
+
+.right {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* INPUTS */
+
+.input-box {
+    margin-bottom: 17px;
+}
+
+.input-box label {
+    display: block;
+    color: #444;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108,99,255,0.25);
+}
+
+/* BUTTON */
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #6c63ff, #7b4bb7);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* LOGIN LINK */
+
+.login {
+    text-align: center;
+    margin-top: 22px;
+    color: #777;
+}
+
+.login a {
+    color: #6c63ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .left {
+        padding: 35px;
+    }
+
+    .right {
+        padding: 40px 30px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="left">
+
+        <div class="logo">
+            🤖 CareerMatch AI
+        </div>
+
+        <h1>
+            Start your career journey today.
+        </h1>
+
+        <p>
+            Create your account and discover job
+            opportunities tailored to your skills and
+            career goals.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                ✓ Find jobs matching your skills
+            </div>
+
+            <div class="feature">
+                ✓ Upload and analyze your resume
+            </div>
+
+            <div class="feature">
+                ✓ Discover personalized career opportunities
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="right">
+
+        <h2>Create Account 🚀</h2>
+
+        <p class="subtitle">
+            Join CareerMatch AI and find your next opportunity.
+        </p>
+
+
+        <form action="RegisterServlet" method="post">
+
+            <div class="input-box">
+
+                <label>Username</label>
+
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter your username"
+                    required>
+
+            </div>
+
+
+            <div class="input-box">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+
+            </div>
+
+
+            <div class="input-box">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Create a password"
+                    required>
+
+            </div>
+
+
+            <button type="submit">
+                Create Account
+            </button>
+
+        </form>
+
+
+        <p class="login">
+
+            Already have an account?
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

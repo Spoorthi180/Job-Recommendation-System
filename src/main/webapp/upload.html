@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CareerMatch AI - Resume Upload</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6ff;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.nav {
+    background: linear-gradient(135deg, #5b5ce2, #7b4bb7);
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN */
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 50px auto;
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.header p {
+    color: #777;
+}
+
+/* UPLOAD CARD */
+
+.upload-card {
+    background: white;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* UPLOAD AREA */
+
+.upload-area {
+    border: 2px dashed #b7b3f5;
+    background: #f8f7ff;
+    border-radius: 15px;
+    padding: 45px 20px;
+    margin-bottom: 25px;
+}
+
+.upload-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.upload-area h2 {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.upload-area p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* FILE INPUT */
+
+input[type="file"] {
+    width: 100%;
+    max-width: 450px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+/* BUTTON */
+
+button {
+    padding: 14px 35px;
+    background: linear-gradient(135deg, #6c63ff, #7b4bb7);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* INFO */
+
+.info {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: #666;
+    font-size: 14px;
+}
+
+.info div {
+    background: #f5f4ff;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .nav {
+        padding: 18px 20px;
+    }
+
+    .nav-links a {
+        margin-left: 10px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .upload-card {
+        padding: 25px;
+    }
+
+    .info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+    <div class="logo">
+        🤖 CareerMatch AI
+    </div>
+
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="upload.html">Upload Resume</a>
+        <a href="login.html">Logout</a>
+    </div>
+
+</div>
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+    <div class="header">
+
+        <h1>Upload Your Resume 📄</h1>
+
+        <p>
+            Upload your resume to help us find jobs
+            that match your skills and experience.
+        </p>
+
+    </div>
+
+
+    <!-- UPLOAD CARD -->
+
+    <div class="upload-card">
+
+        <form action="UploadServlet"
+              method="post"
+              enctype="multipart/form-data">
+
+            <div class="upload-area">
+
+                <div class="upload-icon">
+                    📄
+                </div>
+
+                <h2>
+                    Upload your resume
+                </h2>
+
+                <p>
+                    Choose your resume file from your computer
+                </p>
+
+                <input
+                    type="file"
+                    name="resume"
+                    accept=".pdf,.doc,.docx"
+                    required>
+
+            </div>
+
+
+            <button type="submit">
+                🤖 Upload & Analyze
+            </button>
+
+        </form>
+
+
+        <div class="info">
+
+            <div>
+                📑 PDF / DOC / DOCX
+            </div>
+
+            <div>
+                🔒 Secure Upload
+            </div>
+
+            <div>
+                🎯 Job Matching
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
